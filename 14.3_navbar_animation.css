@@ -1,0 +1,49 @@
+nav {
+display: flex;
+justify-content: center;
+}
+
+ul {
+display: flex;
+list-style-type: none;
+}
+
+li {
+position: relative;
+}
+
+
+li a {
+color: black;
+padding: 14px 16px;
+text-decoration: none;
+position: relative;
+overflow: hidden;
+}
+
+li a::before, li a::after {
+content: "";
+position: absolute;
+background-color: black ;
+width: 0;
+height: 2px;
+transition: width 0.4S ease;
+}
+
+li a::before {
+top:0;
+left:0;
+} 
+
+li a::after {
+bottom: 0;
+right:0;
+}
+
+li a:hover::before {
+width:100%;
+}
+
+li a:hover::after {
+    width:100%;
+}

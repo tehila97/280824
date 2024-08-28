@@ -1,0 +1,24 @@
+#section1 {
+width:200px;
+height: 200px;
+background-color: red;
+position: relative;
+overflow: hidden;
+}
+
+#section1::before
+ {
+    content:"";
+    width:200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    }   
+
+    #section1:hover::before {
+       transform: translateX(300px);
+    }
+
+ 
